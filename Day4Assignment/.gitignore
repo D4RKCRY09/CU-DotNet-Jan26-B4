@@ -1,9 +1,0 @@
-# Ignore the Visual Studio cache/settings folder everywhere
-.vs/
-
-# Also ignore build output folders everywhere
-bin/
-obj/
-
-# Ignore user-specific files
-*.user
