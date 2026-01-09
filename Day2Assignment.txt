@@ -1,0 +1,87 @@
+using System;
+
+public class Day2
+{
+    public static void Main()
+    {
+        // Exercise 1: Attendance
+        int attended = 42;
+        int total = 50;
+        double ratio = (double)attended / total;
+        double percent = ratio * 100;
+        int displayPercent = (int)Math.Round(percent);
+
+        Console.WriteLine($"Attendance: {displayPercent}%");
+
+        // Exercise 2: Exam Results
+        int math = 85;
+        int science = 92;
+        int english = 79;
+        double avgMark = (math + science + english) / 3.0;
+        int Rank = (int)avgMark;
+
+        Console.WriteLine($"Average: {avgMark:F2}");
+        Console.WriteLine($" Rank: {Rank}");
+
+        // Exercise 3: Library Fines
+        decimal dailyRate = 1.50m;
+        int lateDays = 7;
+        decimal Due = dailyRate * lateDays;
+        double Value = (double)Due;
+
+        Console.WriteLine($"Fine: ${Due}");
+        Console.WriteLine($"Log: {Value}");
+
+        // Exercise 4: Banking Interest
+        decimal balance = 1500.75m;
+        float rate = 0.045f;
+        decimal interest = balance * (decimal)(rate / 12);
+        balance += interest;
+
+        Console.WriteLine($"New Balance: {balance:C}");
+
+        // Exercise 5: E-Commerce Order
+        double cartTotal = 199.99;
+        decimal taxRate = 0.08m;
+        decimal final = (decimal)cartTotal + ((decimal)cartTotal * taxRate);
+
+        Console.WriteLine($"Final Amount: {final:C}");
+
+        // Exercise 6: Weather Monitoring
+        short rawTemp = 450; 
+        double celsius = rawTemp / 10.0;
+        int temp = (int)Math.Round(celsius);
+
+        Console.WriteLine($"Exact: {celsius}°C, Display: {temp}°C");
+
+        // Exercise 7: University Grading
+        double score = 88.7;
+        byte grade;
+        if (score >= 90) grade = 4;
+        else if (score >= 80) grade = 3;
+        else grade = 2;
+
+        Console.WriteLine($"Grade Point: {grade}");
+
+        // Exercise 8: Data Usage Tracker
+        long bytes = 2147483648L;
+        double gigabytes = bytes / 1073741824.0;
+        int roundedUsage = (int)Math.Round(gigabytes);
+
+        Console.WriteLine($"Usage: {gigabytes:F2} GB (Rounded: {roundedUsage} GB)");
+
+        // Exercise 9: Warehouse Inventory
+        int current = 30000;
+        ushort maxCapacity = 50000;
+        bool isOverCapacity = current > (int)maxCapacity;
+
+        Console.WriteLine($"Over Capacity: {isOverCapacity}");
+
+        // Exercise 10: Payroll Salary
+        int salary = 5000;
+        double bonus = 1.15;
+        decimal netSalary = (decimal)(salary * bonus);
+
+        Console.WriteLine($"Net Salary: {netSalary:C}");
+    }
+}
