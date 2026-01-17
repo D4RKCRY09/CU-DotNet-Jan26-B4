@@ -50,8 +50,8 @@
         }
         static decimal CalculateDiscount(decimal total, bool isFestivalWeek)
         {
-            if (isFestivalWeek) return (CalculateDiscount(total)+0.05M)*total;
-            else return CalculateDiscount(total)*total;
+            if (isFestivalWeek) return (CalculateDiscount(total) + 0.05M) * total;
+            else return CalculateDiscount(total) * total;
         }
 
         static decimal CalculateTax(decimal amount)
