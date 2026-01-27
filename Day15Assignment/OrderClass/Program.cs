@@ -32,6 +32,7 @@
         public Order() 
         {
             date = DateTime.Now;
+            ;
             status = "NEW";
         }
 
@@ -55,7 +56,7 @@
 
         public void GetOrderSummary()
         {
-            Console.WriteLine($"Order ID : {OrderId}\nCustomer : {CustomerName}\nTotal Amount : {TotalAmount}\nStatus : {status}");
+            Console.WriteLine($"Order ID : {OrderId}\nCustomer : {CustomerName}\nTotal Amount : {TotalAmount}\nStatus : {status}\n Date : {date}");
         }
     }
     internal class Program
