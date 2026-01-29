@@ -87,6 +87,8 @@
             string ans = new string(arr);
             return ans;
         }
+
+        
         static string[] Convert(string[] names)
         {
             for(int i=0;i<names.Length;i++)
@@ -97,8 +99,31 @@
             Array.Sort(names);
             return names;
         }
+
+        static string StringCompression(string s)
+        {
+            string ans = "";
+            for(int i=1;i<s.Length;i++)
+            {
+                int count = 0;
+                if (s[i - 1] == s[i])
+                {
+                    count++;  
+                }
+                else
+                {
+                    ans += s[i];
+                    ans += count;
+                    count = 0;
+                }
+            }
+            return ans;
+        }
         static void Main(string[] args)
         {
+
+            string s = "abbaaabbbccccccdhewufweoifjweojoih";
+            Console.WriteLine(StringCompression(s));
             //string s = "12121";
             //char[] arr = s.ToCharArray();
 
@@ -126,10 +151,14 @@
             //    Console.WriteLine(names[i]);
             //}
 
-            int[] arr = { 11, 22, 33, 66, 72, 90 };
-            Array.Sort(arr);
-            Array.Reverse(arr);
-            Console.WriteLine(SecondLargest(arr));
+            //int[] arr = { 11, 22, 33, 66, 72, 90 };
+            //Array.Sort(arr);
+            //Array.Reverse(arr);
+            //Console.WriteLine(SecondLargest(arr));
+
+
+
+
         }
     }
 }
