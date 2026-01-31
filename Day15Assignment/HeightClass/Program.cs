@@ -25,7 +25,7 @@
 
         }
 
-        public Height AddHeight(Height h1,Height h2)
+        public static Height operator +(Height h1,Height h2)
         {
             decimal temp_inches = h1.Inches + h2.Inches;
             int temp_feet = h1.Feet + h2.Feet;
@@ -38,6 +38,7 @@
             Height addedHeight = new Height(temp_feet, temp_inches);
             return addedHeight;
         }
+
 
         public override string ToString()
         {
@@ -61,7 +62,7 @@
 
             Console.WriteLine($"Height - {h1}");
             Console.WriteLine($"Height - {h2}");
-            Console.WriteLine($"Total Height - {h1.AddHeight(h1,h2)}");
+            Console.WriteLine($"Total Height - {h1 + h2}");
         }
     }
 }
