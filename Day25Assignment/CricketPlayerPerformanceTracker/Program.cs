@@ -74,6 +74,7 @@
                 }
                 
                 list.Sort(new StrikeRateSorter());
+                list.Reverse();
 
                 Console.WriteLine($"{"Name",-10} Runs SR Avg");
                 Console.WriteLine();
