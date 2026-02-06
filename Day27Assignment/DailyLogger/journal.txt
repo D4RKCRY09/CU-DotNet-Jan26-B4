@@ -1,0 +1,2 @@
+Today I revised FileStream
+I also revised StreamWriter
