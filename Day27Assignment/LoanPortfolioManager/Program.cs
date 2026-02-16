@@ -10,7 +10,6 @@ namespace LoanPortfolioManager
 
     }
 
-
     internal class Program
     {
         static List<Loan> loanlist = new List<Loan>();
