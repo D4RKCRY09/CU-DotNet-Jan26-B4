@@ -1,0 +1,114 @@
+<!-- Create a Web Entry Form for any Entity 
+of your choice to gather information.
+Use all types of inputs and their attributes.
+Use Table to align Labels and controls.
+
+
+1.Customer KYC
+2.Loan
+3.Bank Account Opening
+4.Passport Application
+5.Driving License
+6.College Admission -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Admission Form</title>
+</head>
+<body>
+    <h1> College form</h1>
+    <form >
+        <table>
+        <tr>
+            <td>
+                <label id = "name" > Enter your name : </label>
+                <input id = "name" type = "text" patter = [a-z] required> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label id = "DOB"> Enter Date of birth</label>
+                <input id = "DOB" type = "date" required max = 2008-01-01 min = 2000-01-01>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label name = "Gender"> Select gender: </label>
+                <input name  = "Male" type = "radio"/>
+                <label for = "Male"> Male </label>
+                <input name = "Female" type = "radio"/>
+                <label for = "Female"> Female </label>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="number">Enter your Number : </label>
+                <input name = "number" type = "text" pattern = [0-9]>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Enter you Email : </label>
+                <input name = "email" type = "email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for = "10th"> Enter 10th score : </label>
+                <input name = "10th" type = "number" min = 75 max = 100>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for = "12th"> Enter 12th score : </label>
+                <input name = "12th" type = "number" min = 75 max = 100>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="course">Select the course you want to pursue : </label>
+                <select name="course" id="course">
+                    <option value="0">Select</option>
+                    <option value="1">BTech</option>
+                    <option value="2">BCA</option>
+                    <option value="3">MBA</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="hostel"> Would you require a hostel : </label>
+                <select name="hostel" id="course">
+                    <option value="0">Select</option>
+                    <option value="1">Yes</option>
+                    <option value="2">No</option> 
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input name = "support" type = "checkbox">
+                <label for = "support" > Do you need Financial Support?</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input name = "pwd" type = "checkbox">
+                <label for = "pwd" > Are you a person with disability? </label>
+            </td>
+        </tr>        
+        <tr>
+            <td>
+                <input type = "submit">
+                <input type = "reset">
+            </td>
+        </tr>
+
+    </table>
+    </form>
+</body>
+</html>
