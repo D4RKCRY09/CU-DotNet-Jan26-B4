@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Form Example</title>
+
+    <script>
+      function showData() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var gender = document.querySelector(
+          'input[name="gender"]:checked',
+        ).value;
+        var course = document.getElementById("course").value;
+
+        var hobbies = "";
+        var hobbyList = document.querySelectorAll(
+          'input[name="hobby"]:checked',
+        );
+
+        hobbyList.forEach(function (h) {
+          hobbies += h.value + " ";
+        });
+
+        // Concatenated string
+        var result =
+          "Name: " +
+          name +
+          "\nEmail: " +
+          email +
+          "\nGender: " +
+          gender +
+          "\nCourse: " +
+          course +
+          "\nHobbies: " +
+          hobbies;
+
+        alert(result);
+
+        return false; // prevents form submission
+      }
+    </script>
+  </head>
+
+  <body>
+    <form onsubmit="return showData();">
+      Name: <input type="text" id="name" /><br /><br />
+
+      Email: <input type="email" id="email" /><br /><br />
+
+      Gender:
+      <input type="radio" name="gender" value="Male" /> Male
+      <input type="radio" name="gender" value="Female" /> Female <br /><br />
+
+      Course:
+      <select id="course">
+        <option value="BCA">BCA</option>
+        <option value="BBA">BBA</option>
+        <option value="BTech">BTech</option>
+      </select>
+      <br /><br />
+
+      Hobbies:
+      <input type="checkbox" name="hobby" value="Reading" /> Reading
+      <input type="checkbox" name="hobby" value="Sports" /> Sports
+      <input type="checkbox" name="hobby" value="Music" /> Music <br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
