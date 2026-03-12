@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Contact Support / Internal Helpdesk</h4>
+                </div>
+                <div class="card-body p-4">
+                    <form id="contactForm">
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="empID" class="form-label">Employee ID</label>
+                                <input type="text" class="form-control" id="empID" placeholder="1234567" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="firstname.lastname@capgemini.com" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Inquiry Department</label>
+                            <select class="form-select" id="department" required>
+                                <option value="" selected disabled>Select a department...</option>
+                                <option value="it">IT Global Infrastructure</option>
+                                <option value="hr">HR & Payroll</option>
+                                <option value="learning">L&D (Learning & Development)</option>
+                                <option value="project">Project Management Office (PMO)</option>
+                                <option value="security">Cybersecurity & Data Privacy</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">How can we help?</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Describe your issue or request in detail..." required></textarea>
+                        </div>
+
+                        <div class="mb-4 form-check">
+                            <input type="checkbox" class="form-check-input" id="consent" required>
+                            <label class="form-check-label small text-muted" for="consent">
+                                I understand my data will be processed according to the Global Data Privacy Policy.
+                            </label>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit Request</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

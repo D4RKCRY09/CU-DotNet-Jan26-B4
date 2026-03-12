@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Welcome to Capgemini Portal</h1>
+        <p class="col-md-8 fs-4">        <p class="card-text">As a leading advisor and transformation partner to companies around the world, we have leveraged technology to enable business transformation for almost 60 years. We address the entire breadth of business needs, from strategy and design to managing operations and engineering, drawing on deep industry knowledge and technical expertise in cloud, data, artificial intelligence, connectivity, software, digital engineering, and platforms.​</p>
+        </p>
+        <a href="/Products/Index" class="btn btn-primary btn-lg" type="button">Products</a>
+        <a href="/Services/Index" class="btn btn-primary btn-lg" type="button">Services</a>
+    </div>
+</div>
+
+<img src="https://www.capgemini.com/gb-en/wp-content/uploads/sites/5/2024/07/meet-our-people-banner.jpg" class="img-fluid" alt="...">
+
+<script>
+
+    function showToast() {
+        const toastLiveExample = document.getElementById('liveToast');
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+        toastBootstrap.show();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(showToast, 1000);
+    });
+</script>
+<div class="toast-container position-fixed bottom-0 end-0 p-3" onload=" showToast()">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+        <div class="toast-header text-white" style="background-color: #0070AD;">
+            <strong class="me-auto">Bonjour!!</strong>
+            <small>Just now</small>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            All enterprise tools and cloud environments are fully operational. Happy coding!
+        </div>
+    </div>
+</div>
