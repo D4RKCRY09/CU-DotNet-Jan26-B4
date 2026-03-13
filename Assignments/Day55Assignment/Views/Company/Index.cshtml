@@ -1,0 +1,45 @@
+﻿
+<script>
+    var a = '@ViewBag.Announcement';
+            if(a!="") alert(a);
+</script>
+
+<table class="table table-bordered table-striped ">
+    <thead>
+        <tr>
+            <th scope="col">S No</th>
+            <th scope="col">Name </th>
+            <th scope="col">Position </th>
+            <th scope="col">Salary </th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            bool check = (bool)ViewData["ServerStatus"];
+            if(check)
+            {
+                <span class="badge bg-success">Server is Active</span>
+                <br /><br />
+                var list = ViewBag.Employees;
+                int i = 1;
+                foreach (var emp in list)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@emp.Name</td>
+                        <td>@emp.Position</td>
+                        <td>@emp.Salary</td>
+                    </tr>
+                    i++;
+                }
+            }
+            else
+            {
+                <span class="badge bg-danger">Server is currently Under Maintenance</span>
+            }
+        }
+    </tbody>
+</table>
+
+
+
