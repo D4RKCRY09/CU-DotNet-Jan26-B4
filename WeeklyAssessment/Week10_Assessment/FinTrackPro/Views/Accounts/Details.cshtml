@@ -1,0 +1,93 @@
+﻿@model FinTrackPro.Models.Account
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Account</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Balance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Balance)
+        </dd>
+        <dd class="col-sm-10">
+            
+        </dd>
+
+    </dl>
+</div>
+
+@{
+    var transactions = ViewBag?.Transactions as List<Transaction>;
+    //string print = $"{account?.Name}'s data";
+}
+
+@* <h1>@print</h1> *@
+
+<p>
+    <a asp-controller ="Transactions" asp-action="Create">Create New Transaction</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Description
+            </th>
+            <th>
+                Amount
+            </th>
+            <th>
+                Category
+            </th>
+            <th>
+                Date
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            if(transactions!=null)
+            {
+                @foreach (var item in transactions)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Amount)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+                        <td>
+                            <a asp-controller="Transactions" asp-action="Edit" asp-route-id="@item.TransactionId">Edit Transaction</a> |
+                            <a asp-controller="Transactions" asp-action="Delete" asp-route-id="@item.TransactionId">Delete Transaction</a>
+                        </td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.AccountId">Edit Account</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

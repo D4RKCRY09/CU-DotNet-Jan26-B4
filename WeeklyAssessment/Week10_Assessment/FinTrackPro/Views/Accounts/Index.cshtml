@@ -1,0 +1,67 @@
+﻿@model IEnumerable<FinTrackPro.Models.Account>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Index</h1>
+
+@if (TempData["Status"] != null)
+{
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="statusToast" class="toast show border-0 shadow-sm" role="alert" aria-live="assertive" aria-atomic="true" style="background-color: #f8f9fa;">
+            <div class="d-flex p-2">
+                <div class="toast-body d-flex align-items-center">
+                    <span class="text-success me-2">●</span>
+                    <strong class="text-dark">Account created successfully</strong>
+                </div>
+                <button type="button" class="btn-close ms-auto me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            
+            <div class="progress" style="height: 3px; border-radius: 0;">
+                <div id="toastProgress" class="progress-bar bg-success" role="progressbar" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+}
+
+<style>
+    #toastProgress {
+        transition: width 4s linear;
+    }
+</style>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Balance)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Balance)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AccountId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AccountId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AccountId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
