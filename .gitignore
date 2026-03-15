@@ -13,3 +13,5 @@ SafeDrivePolicy/
 
 #ignoring the bootstrap and jquery libraries
 **/wwwroot/lib
+
+node_modules/
