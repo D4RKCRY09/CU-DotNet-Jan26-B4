@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../TravelFrontend/TravelFrontend.csproj" />
+  <Project Path="VagaBond.TravelAPI.csproj" />
+</Solution>
