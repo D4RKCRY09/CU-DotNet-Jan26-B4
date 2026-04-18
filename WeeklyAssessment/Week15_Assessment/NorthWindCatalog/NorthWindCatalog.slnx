@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="NorthWindCatalog.Services/NorthWindCatalog.Services.csproj" />
+  <Project Path="NorthWindCatalog.Test/NorthWindCatalog.Test.csproj" Id="434ad403-4323-4fc1-a541-62625730f21d" />
+  <Project Path="NorthWindCatalog.Web/NorthWindCatalog.Web.csproj" />
+</Solution>

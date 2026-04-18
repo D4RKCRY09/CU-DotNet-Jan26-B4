@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="row">
+    @foreach (var item in Model)
+    {
+        string img = $"/images/{item.CategoryId}.jpeg";
+
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="@img" class="card-img-top card-img-custom" />
+
+                <div class="card-body text-center">
+                    <h5>@item.CategoryName</h5>
+                    <a href="/Products/ByCategory/@item.CategoryId" class="btn btn-primary">
+                        View Products
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
+
